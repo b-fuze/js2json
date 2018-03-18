@@ -1,3 +1,5 @@
+#! /usr/bin/env node
+
 function js2json(str) {
   let newStr = "";
   let depthState = [];
@@ -76,4 +78,21 @@ function js2json(str) {
   }
   
   return newStr;
+}
+
+// Read from stdin and output to stdout
+if (typeof process !== "undefined") {
+  process.stdin.setEncoding('utf8');
+  let data = "";
+  
+  process.stdin.on('readable', () => {
+    const chunk = process.stdin.read();
+    if (chunk !== null) {
+      data += chunk;
+    }
+  });
+  
+  process.stdin.on('end', () => {
+    process.stdout.write(js2json(data));
+  });
 }
