@@ -46,6 +46,9 @@ Becomes
 ```
 It will also be wary of (double) quoted properties; it will leave them as-is because they're already valid JSON properies.
 
+## Why not eval(...)?
+Because using `eval(...)` can potentially produce undefined behaviour in your program, not to mention security issues, you should avoid defaulting to `eval` and instead produce valid JSON to go through `JSON.parse(...)` 
+
 ## Known Issues
  - Assumes all quoted strings uses double quotes
  - Assumes the provided literal is syntactically correct
