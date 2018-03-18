@@ -1,6 +1,11 @@
 # js2json
 Will convert your Javascript literal to JSON while attempting to preserve the majority of the original string, with a minimalistic parser (no regex)
 
+## Usage
+```js
+const json = js2json(jsObjectLiteralString);
+```
+
 Example:
 ```js
   {
