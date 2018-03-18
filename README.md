@@ -6,13 +6,13 @@ Example:
   {
     str: true,
     more: 10000,
-    "lol \\" what": 10,
+    "lol \" what": 10,
     go: false,
     "g-<": {
         prop1: null,
         nothing: 1
     },
-    noMore: "props and stuff \\' \\\\",
+    noMore: "props and stuff \' \\",
     stuff: -1100,
     propsFam: {
       "depth": null,
