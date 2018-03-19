@@ -1,13 +1,18 @@
 # js2json
-Will convert your Javascript literal to JSON while attempting to preserve the majority of the original string, with a minimalistic parser (no regex)
+Will convert your CSS or your Javascript literal to JSON while attempting to preserve the majority of the original string, with a minimalistic parser (no regex)
 
 ## Usage
 In JS
 ```js
-const json = js2json(jsObjectLiteralString);
+const json = js2json(jsObjectLiteralString, stringifyValues, propertyDelimeter, transformDelimeter);
 ```
 
-CLI
+CLI Usage
+```shell
+json2json.js [-c|--css] [-s|--stringify-values]
+```
+
+Example
 ```shell
 echo '{error: "Invalid timestamp"}' | ./js2json.js
 # output: {"error": "Invalid timestamp"}
